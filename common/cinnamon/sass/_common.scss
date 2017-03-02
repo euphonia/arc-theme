@@ -271,7 +271,7 @@ StScrollBar {
 .popup-menu,
 %menu {
   color: $fg_color;
-  border-image: url("#{$asset_path}/menu/menu.svg") 9 9 9 9;
+  background-color: $bg_color;
 
   &-arrow { icon-size: 16px; }
 
@@ -317,12 +317,13 @@ StScrollBar {
 }
 
 .popup-menu-boxpointer {
-  -arrow-border-radius: 3px;
-  -arrow-background-color:  rgba(0,0,0,0.0);
+  -arrow-border-radius: 0;
+  -arrow-background-color: $bg_color;
   -arrow-border-width: 1px;
-  -arrow-border-color: rgba(0,0,0,0.0);
-  -arrow-base: 0;
-  -arrow-rise: 0;
+  -arrow-border-color: $borders_color;
+  -arrow-base: 21px;
+  -arrow-rise: 9px;
+  -boxpointer-gap: 2px;
 }
 
 .popup-combo-menu {
