@@ -1509,8 +1509,8 @@ StScrollBar {
     background-gradient-direction: none;
     border: 0px solid $selected_bg_color;
 
-    .panel-bottom & { border-bottom-width: 1px; }
-    .panel-top & { border-top-width: 1px; }
+    .panel-bottom & { border-bottom-width: 1px; padding-bottom: 0; }
+    .panel-top & { border-top-width: 1px; padding-top: 0; }
     .panel-left & { border-left-width: 1px; padding-left: 0; }
     .panel-right & { border-right-width: 1px; padding-right: 0; }
   }
