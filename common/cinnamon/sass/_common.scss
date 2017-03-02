@@ -246,7 +246,7 @@ StScrollBar {
 //
 .cinnamon-link {
   color: $link_color;
-  text-decoration: underline;
+  text-decoration: none;
 
   &:hover { color: lighten($link_color,10%); }
 }
