@@ -825,7 +825,7 @@ StScrollBar {
     -natural-hpadding: 10px;
     -minimum-hpadding: 6px;
     font-weight: bold;
-    color: $_panel_fg_color;
+    color: transparentize($_panel_fg_color, .2);
     transition-duration: 100ms;
     border-bottom-width: 1px;
     border-color: transparent;
@@ -846,7 +846,6 @@ StScrollBar {
 
     &:active, &:overview, &:focus, &:checked {
       color: $selected_fg_color;
-      background-color: $selected_bg_color;
       box-shadow: none;
       border-bottom-width: 1px;
       border-color: black;

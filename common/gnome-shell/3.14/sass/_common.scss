@@ -870,7 +870,7 @@ StScrollBar {
     -natural-hpadding: 10px !important;
     -minimum-hpadding: 6px !important;
     font-weight: bold;
-    color: $_panel_fg_color !important;
+    color: transparentize($_panel_fg_color, .2) !important;
     transition-duration: 100ms;
     border-bottom-width: 1px;
     border-color: transparent;
