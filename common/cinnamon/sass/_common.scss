@@ -1539,7 +1539,7 @@ StScrollBar {
   &-box {
     padding-left: 3px;
     padding-right: 3px;
-    color: $_shell_fg_color;
+    color: transparentize($_shell_fg_color, .2);
     text-shadow: none;
     transition-duration: 100;
 
@@ -1549,19 +1549,19 @@ StScrollBar {
 
     &:hover {
       color: $selected_fg_color;
-      background-color: $selected_bg_color;
     }
 
     &:highlight {
       background-image: none;
       border-image: none;
+      color: $_shell_fg_color;
       background-color: transparentize($error_color, 0.5);
     }
   }
 
   &-label {
     font-weight: bold;
-    color: $_shell_fg_color;
+    color: transparentize($_shell_fg_color, .2);
 
     &:hover, .applet-box:hover > & {
       color: $selected_fg_color;
@@ -1570,7 +1570,7 @@ StScrollBar {
   }
 
   &-icon {
-    color: $_shell_fg_color;
+    color: transparentize($_shell_fg_color, .2);
     icon-size: 22px;
 
     &:hover, .applet-box:hover > & {
