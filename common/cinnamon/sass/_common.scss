@@ -486,7 +486,7 @@ StScrollBar {
 .expo-workspaces-name-entry#selected {
   height: 15px;
   border-radius: 2px;
-  font-size: 9pt;
+  font-weight: bold;
   padding: 5px 8px;
   -cinnamon-caption-spacing: 4px;
   @include entry(osd);
@@ -814,6 +814,7 @@ StScrollBar {
 #altTabPopup {
   padding: 8px;
   spacing: 16px;
+  font-weight: bold;
 }
 
 .switcher-list {
@@ -1446,13 +1447,13 @@ StScrollBar {
 .workspace-button {
   width: 20px;
   height: 10px;
-  color: $selected_fg_color;
+  color: transparentize($selected_fg_color, .5);
   padding: 3px;
   padding-top: 4px;
   transition-duration: 300;
 
-  &:outlined, &:outlined:hover { color: $selected_bg_color; }
-  &:hover { color: transparentize($selected_bg_color, 0.5) }
+  &:outlined, &:outlined:hover { color: $selected_fg_color; }
+  &:hover { color: transparentize($selected_fg_color, 0.25) }
 }
 
 /* Controls the style when using the "Visual representation" option */
@@ -1480,9 +1481,9 @@ StScrollBar {
 }
 
 .workspace-graph .workspace:active .windows {
-  -active-window-background: lighten($panel_bg, 20%);
+  -active-window-background: lighten($panel_bg, 40%);
   -active-window-border: rgba(0, 0, 0, 0.8);
-  -inactive-window-background: lighten($panel_bg, 5%);
+  -inactive-window-background: lighten($panel_bg, 25%);
   -inactive-window-border: rgba(0, 0, 0, 0.8);
 }
 
@@ -1655,10 +1656,11 @@ StScrollBar {
 //
 /*FIXME*/
 .workspace-osd {
-  /*color: red;*/
-  text-shadow: black 5px 5px 5px;
+  color: $osd_fg_color;
+  border-image: url("common-assets/misc/bg.svg") 9 9 9 9;
   font-weight: bold;
-  font-size: 48pt;
+  font-size: 20pt;
+  padding: 16pt;
 }
 
 //
